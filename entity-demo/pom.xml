@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.kamingpan.infrastructure.demo</groupId>
+        <artifactId>infrastructure-demo</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.kamingpan.infrastructure.demo</groupId>
+    <artifactId>entity-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>entity-demo - 实体示例</name>
+    <url>https://github.com/kamingpan/infrastructure-demo/tree/master/entity-demo</url>
+    <description>entity demo.</description>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kamingpan.infrastructure</groupId>
+            <artifactId>infrastructure-entity</artifactId>
+            <version>${infrastructure.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>entity-demo</finalName>
+
+        <plugins>
+            <!-- 清除级别配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+            </plugin>
+
+            <!-- 编译级别配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

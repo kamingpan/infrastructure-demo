@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.kamingpan.infrastructure.demo</groupId>
+        <artifactId>infrastructure-demo</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.kamingpan.infrastructure.demo</groupId>
+    <artifactId>management-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>management-demo - 管理系统示例</name>
+    <url>https://github.com/kamingpan/infrastructure-demo/tree/master/management-demo</url>
+    <description>management demo.</description>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+        <!-- 实体模块 -->
+        <dependency>
+            <groupId>com.kamingpan.infrastructure.demo</groupId>
+            <artifactId>entity-demo</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+
+        <!-- 管理端模块 -->
+        <dependency>
+            <groupId>com.kamingpan.infrastructure</groupId>
+            <artifactId>infrastructure-management</artifactId>
+            <version>${infrastructure.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.kamingpan.infrastructure</groupId>
+                    <artifactId>infrastructure-entity</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>management-demo</finalName>
+
+        <plugins>
+            <!-- spring boot 打包运行文件插件 -->
+            <!--<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>-->
+
+            <!-- 清除级别配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+            </plugin>
+
+            <!-- 编译级别配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

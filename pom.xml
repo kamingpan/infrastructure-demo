@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.kamingpan.infrastructure</groupId>
+        <artifactId>infrastructure-integration</artifactId>
+        <version>1.0.0</version>
+        <relativePath></relativePath>
+    </parent>
+
+    <groupId>com.kamingpan.infrastructure.demo</groupId>
+    <artifactId>infrastructure-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>infrastructure-demo - 基础框架示例</name>
+    <url>https://github.com/kamingpan/infrastructure-demo</url>
+    <description>infrastructure demo.</description>
+
+    <modules>
+        <module>entity-demo</module>
+        <module>management-demo</module>
+        <module>subscription-demo</module>
+        <module>mini-program-demo</module>
+        <module>terminal-demo</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>kamingpan</name>
+            <email>kamingpan@qq.com</email>
+            <organization>kamingpan</organization>
+            <organizationUrl>https://www.kamingpan.com/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/kamingpan/infrastructure-demo.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/kamingpan/infrastructure-demo.git</developerConnection>
+        <url>https://github.com/kamingpan/infrastructure-demo</url>
+    </scm>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/kamingpan/infrastructure-demo/issues</url>
+    </issueManagement>
+
+    <properties>
+        <!-- spring-boot版本 -->
+        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+
+        <!-- 基础框架版本 -->
+        <infrastructure.version>1.0.0</infrastructure.version>
+    </properties>
+
+    <dependencies>
+    </dependencies>
+
+    <build>
+        <finalName>infrastructure-demo</finalName>
+
+        <plugins>
+            <!-- 清除级别配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+            </plugin>
+
+            <!-- 编译级别配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
